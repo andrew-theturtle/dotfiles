@@ -1,0 +1,19 @@
+echo "Opening Github Issue"
+giturl=$(git config --get remote.origin.url)
+giturl=$( tr '[A-Z]' '[a-z]' <<< $giturl)
+branch=$(git rev-parse --abbrev-ref HEAD)
+issue=$(git rev-parse --abbrev-ref HEAD | cut -d'-' -f1,1 )
+
+if [[ $giturl == *"http"* ]]
+then
+    echo "Opening HTTP"
+else
+    giturl=${giturl/\.git}
+    giturl=${giturl//[:]/\/}
+    giturl=${giturl/\git@}
+    protocol="http://"
+fi
+
+giturl="$protocol$giturl/issues/${issue}"
+echo $giturl
+open $giturl
