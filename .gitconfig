@@ -1,0 +1,11 @@
+[merge]
+	tool = opendiff
+[mergetool "opendiff"]
+	trustExitCode = true
+[core]
+	excludesfile = /Users/andrew/.gitignore
+[user]
+	name = Andrew Pham
+	email = phambuibinhan@gmail.com
+[init]
+	defaultBranch = main
