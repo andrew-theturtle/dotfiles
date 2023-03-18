@@ -5,3 +5,4 @@ tags
 .ctagsignore
 .netrwhist
 .vim/bundle/
+.config/nvim/plugin
