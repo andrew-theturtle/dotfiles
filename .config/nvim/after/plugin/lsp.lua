@@ -32,6 +32,9 @@ lsp.on_attach(function(_, bufnr)
 	nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
 	nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 	nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+    nmap('<leader>vs', vim.diagnostic.open_float, '')
+    nmap('nd', vim.diagnostic.goto_next, 'Go to next diag mess')
+    nmap('Nd', vim.diagnostic.goto_prev, 'Go to prev diag mess')
 
 	-- Create a command `:Format` local to the LSP buffer
 	vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
