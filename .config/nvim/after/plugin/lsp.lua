@@ -1,6 +1,6 @@
 local lsp = require('lsp-zero').preset({
   name = 'minimal',
-  set_lsp_keymaps = true,
+  set_lsp_keymaps = false,
   manage_nvim_cmp = true,
   suggest_lsp_servers = false,
 })
@@ -32,10 +32,9 @@ lsp.on_attach(function(_, bufnr)
 
 		vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
 	end
-	nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-	nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-	nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-    nmap('<leader>vs', vim.diagnostic.open_float, '')
+    -- <C-O> to jump back to the previous cursor positions
+    -- <C-I> to jump forward to the next cursor positions
+    nmap('gl', vim.diagnostic.open_float, '')
     nmap('nd', vim.diagnostic.goto_next, 'Go to next diag mess')
     nmap('Nd', vim.diagnostic.goto_prev, 'Go to prev diag mess')
 
