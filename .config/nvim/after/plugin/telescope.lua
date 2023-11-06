@@ -11,9 +11,16 @@ telescope.setup {
             i = {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
+                ['<esc>'] = actions.close,
             },
         },
+        file_ignore_patterns = { '.git/' },
     },
+    pickers = {
+        find_files = {
+            hidden = true,
+        },
+    }
 }
 
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
