@@ -23,6 +23,8 @@ set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 
+set nowrap
+
 "------------Visual------------"
 colorscheme atom-dark-256
 
