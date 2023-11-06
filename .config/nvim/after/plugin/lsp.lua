@@ -24,6 +24,26 @@ lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
 })
 
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+
+require('lspconfig').volar.setup({
+    filetypes = {'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'vue'},
+})
+
+require('lspconfig').jsonls.setup({
+    settings = {
+        json = {
+            schemas = require('schemastore').json.schemas(),
+            validate = {enable = true},
+        },
+    },
+})
+
 lsp.on_attach(function(_, bufnr)
 	local nmap = function(keys, func, desc)
 		if desc then
@@ -37,6 +57,8 @@ lsp.on_attach(function(_, bufnr)
     nmap('gl', vim.diagnostic.open_float, '')
     nmap('nd', vim.diagnostic.goto_next, 'Go to next diag mess')
     nmap('Nd', vim.diagnostic.goto_prev, 'Go to prev diag mess')
+    nmap('K', vim.lsp.buf.hover, 'Show hover')
+    nmap('<leader>rn', vim.lsp.buf.rename, 'Rename')
 
 	-- Create a command `:Format` local to the LSP buffer
 	vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
