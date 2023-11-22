@@ -103,7 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # Tettra
 # Logs
 alias artisan='php artisan'
-alias qlisten='php artisan queue:listen --tries=2 --timeout=600 --queue=indexing,priority,email,low,default'
+alias qlisten='php artisan queue:listen --tries=2 --timeout=1800 --queue=indexing,priority,default,email,low'
+alias clearlogs='echo >~/tettra/tettra-wiki/storage/logs/laravel.log'
 
 # Personal Alias
 alias ll="ls -lh"
