@@ -135,6 +135,10 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/.script
 export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$(python3 -m site --user-base)/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andrew'
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
