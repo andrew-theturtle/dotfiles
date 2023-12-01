@@ -4,5 +4,6 @@
 tags
 .ctagsignore
 .netrwhist
-.vim/bundle/
-.config/nvim/plugin
+vim/.vim/bundle/
+nvim/.config/nvim/plugin
+nvim/.config/nvim/spell

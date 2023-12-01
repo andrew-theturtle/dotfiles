@@ -1,3 +1,5 @@
+#! /usr/bin/env bash
+
 echo "Opening Github Issue"
 giturl=$(git config --get remote.origin.url)
 giturl=$( tr '[A-Z]' '[a-z]' <<< $giturl)

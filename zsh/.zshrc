@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -75,7 +77,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions colorize)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-. $(brew --prefix)/etc/profile.d/z.sh
+# . $(brew --prefix)/etc/profile.d/z.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

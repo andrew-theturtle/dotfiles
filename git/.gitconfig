@@ -4,6 +4,7 @@
 	trustExitCode = true
 [core]
 	excludesfile = /Users/andrew/.gitignore
+	editor = vim
 [user]
 	name = Andrew Pham
 	email = 62633701+andrew-theturtle@users.noreply.github.com

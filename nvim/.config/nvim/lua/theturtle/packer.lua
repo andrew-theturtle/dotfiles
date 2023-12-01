@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
 
     use("nvim-treesitter/nvim-treesitter-context");
 
+    use("jwalton512/vim-blade");
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
