@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 echo "Opening git repo"
 giturl=$(git config --get remote.origin.url)
@@ -27,6 +27,3 @@ else
 	echo $giturl
 	open $giturl
 fi
-
-
-
