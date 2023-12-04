@@ -1,0 +1,9 @@
+.env
+.DS_Store
+.idea
+tags
+.ctagsignore
+.netrwhist
+vim/.vim/bundle/
+nvim/.config/nvim/plugin
+nvim/.config/nvim/spell
