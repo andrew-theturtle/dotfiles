@@ -31,9 +31,16 @@ lsp.set_sign_icons({
   info = '»'
 })
 
-require('lspconfig').volar.setup({
-    filetypes = {'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'vue'},
-})
+-- require('lspconfig').volar.setup({
+--     filetypes = {'typescript', 'javascript', 'typescriptreact', 'javascriptreact', 'vue'},
+-- })
+
+require('lspconfig').tailwindcss.setup{}
+require('lspconfig').tsserver.setup{}
+require('lspconfig').clangd.setup{}
+require('lspconfig').phpactor.setup{}
+require('lspconfig').lua_ls.setup{}
+require('lspconfig').pylsp.setup{}
 
 require('lspconfig').jsonls.setup({
     settings = {
@@ -58,6 +65,7 @@ lsp.on_attach(function(_, bufnr)
     nmap('nd', vim.diagnostic.goto_next, 'Go to next diag mess')
     nmap('Nd', vim.diagnostic.goto_prev, 'Go to prev diag mess')
     nmap('K', vim.lsp.buf.hover, 'Show hover')
+    nmap('<leader>ca', vim.lsp.buf.code_action, 'Code action')
     nmap('<leader>rn', vim.lsp.buf.rename, 'Rename')
 
 	-- Create a command `:Format` local to the LSP buffer
