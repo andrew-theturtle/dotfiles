@@ -104,6 +104,7 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use {'ntpeters/vim-better-whitespace'}
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use({
         "kylechui/nvim-surround",
