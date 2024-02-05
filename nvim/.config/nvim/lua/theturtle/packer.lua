@@ -110,4 +110,9 @@ return require('packer').startup(function(use)
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     })
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 end)
