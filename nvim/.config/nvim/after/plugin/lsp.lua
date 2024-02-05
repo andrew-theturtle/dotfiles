@@ -41,6 +41,7 @@ require('lspconfig').clangd.setup{}
 require('lspconfig').phpactor.setup{}
 require('lspconfig').lua_ls.setup{}
 require('lspconfig').pylsp.setup{}
+require('lspconfig').gopls.setup{}
 
 require('lspconfig').jsonls.setup({
     settings = {
