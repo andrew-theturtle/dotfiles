@@ -115,4 +115,10 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { {"nvim-lua/plenary.nvim"} }
     }
+    use {
+        'laytan/cloak.nvim',
+        config = function()
+            require('cloak').setup()
+        end
+    }
 end)
