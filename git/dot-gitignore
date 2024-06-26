@@ -4,6 +4,16 @@
 tags
 .ctagsignore
 .netrwhist
+laradumps.yaml
 vim/.vim/bundle/
 nvim/.config/nvim/plugin
 nvim/.config/nvim/spell
+
+# Yarn 4.0 gitignore
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
