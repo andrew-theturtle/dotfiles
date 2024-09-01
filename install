@@ -13,6 +13,6 @@ for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "stow $folder"
     stow --dotfiles -D $folder
-    stow --doftiles $folder
+    stow --dotfiles $folder
 done
 popd
