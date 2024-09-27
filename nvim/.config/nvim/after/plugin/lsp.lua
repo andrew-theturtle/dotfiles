@@ -36,7 +36,7 @@ lsp.set_sign_icons({
 -- })
 
 require('lspconfig').tailwindcss.setup{}
-require('lspconfig').tsserver.setup{}
+require('lspconfig').ts_ls.setup{}
 require('lspconfig').clangd.setup{}
 require('lspconfig').phpactor.setup{}
 require('lspconfig').lua_ls.setup{}
