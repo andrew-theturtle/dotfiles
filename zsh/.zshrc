@@ -146,3 +146,5 @@ alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andr
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 export PATH=$PATH:$HOME/Library/Application\ Support/Herd/bin/
+
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
