@@ -131,7 +131,7 @@ function gx() { grep -rnIi --color --exclude-dir="$2" "$1" . }
 #G (){ grep -rnI "$1" . --color; }
 
 # helper to check whether path exists
-add_to_path_if_exists() {
+function add_to_path_if_exists() {
     local dir="$1"
     if [ -d "$dir" ] && [[ ":$PATH:" != *":$dir:"* ]]; then
         export PATH="$dir:$PATH"
