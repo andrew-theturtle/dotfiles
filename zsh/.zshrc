@@ -144,8 +144,8 @@ export NVM_DIR="$HOME/.nvm"
 
 add_to_path_if_exists "/opt/homebrew/bin"
 add_to_path_if_exists "/home/linuxbrew/.linuxbrew/bin"
-add_to_path_if_exists "~/.composer/vendor/bin"
-add_to_path_if_exists "~/.script"
+add_to_path_if_exists "$HOME/.composer/vendor/bin"
+add_to_path_if_exists "$HOME/.script"
 [ -x /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
 add_to_path_if_exists "$(python3 -m site --user-base)/bin"
 
