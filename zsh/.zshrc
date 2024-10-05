@@ -136,7 +136,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/.script
-export JAVA_HOME=$(/usr/libexec/java_home)
+[ -x /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:$(python3 -m site --user-base)/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
