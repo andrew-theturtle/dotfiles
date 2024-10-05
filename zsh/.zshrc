@@ -143,9 +143,7 @@ export PATH=$PATH:$(python3 -m site --user-base)/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andrew'
 
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-export PATH=$PATH:$HOME/Library/Application\ Support/Herd/bin/
-
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
