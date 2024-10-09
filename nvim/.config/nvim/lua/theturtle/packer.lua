@@ -106,6 +106,7 @@ return require('packer').startup(function(use)
     }
     use {'ntpeters/vim-better-whitespace'}
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
