@@ -130,19 +130,29 @@ function g() { grep -rnIi --color "$1" . }
 function gx() { grep -rnIi --color --exclude-dir="$2" "$1" . }
 #G (){ grep -rnI "$1" . --color; }
 
+# helper to check whether path exists
+function add_to_path_if_exists() {
+    local dir="$1"
+    if [ -d "$dir" ] && [[ ":$PATH:" != *":$dir:"* ]]; then
+        export PATH="$dir:$PATH"
+    fi
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=$PATH:~/.composer/vendor/bin
-export PATH=$PATH:~/.script
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:$(python3 -m site --user-base)/bin
+
+add_to_path_if_exists "/opt/homebrew/bin"
+add_to_path_if_exists "/home/linuxbrew/.linuxbrew/bin"
+add_to_path_if_exists "$HOME/.composer/vendor/bin"
+add_to_path_if_exists "$HOME/.script"
+[ -x /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
+add_to_path_if_exists "$(python3 -m site --user-base)/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andrew'
 
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-export PATH=$PATH:$HOME/Library/Application\ Support/Herd/bin/
