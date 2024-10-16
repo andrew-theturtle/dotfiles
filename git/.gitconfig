@@ -3,7 +3,7 @@
 [mergetool "opendiff"]
 	trustExitCode = true
 [core]
-	excludesfile = /Users/andrew/.gitignore
+	excludesFile = ~/.gitignore
 	editor = vim
 [user]
 	name = Andrew Pham
