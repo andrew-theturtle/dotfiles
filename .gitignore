@@ -7,3 +7,7 @@ tags
 vim/.vim/bundle/
 nvim/.config/nvim/plugin
 nvim/.config/nvim/spell
+claude/.claude/*
+!claude/.claude/CLAUDE.md
+!claude/.claude/settings.json
+!claude/.claude/skills/
