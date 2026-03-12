@@ -17,3 +17,5 @@ nvim/.config/nvim/spell
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.phpactor.json
