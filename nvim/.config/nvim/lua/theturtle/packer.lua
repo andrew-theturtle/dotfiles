@@ -1,5 +1,8 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
+-- Suppress deprecation warnings from packer
+vim.deprecate = function() end
+
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
 
@@ -21,7 +24,7 @@ return require('packer').startup(function(use)
         end,
     })
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use({'nvim-treesitter/nvim-treesitter', branch = 'main'})
     use('tpope/vim-fugitive')
     -- Allow plugins to enable repeating of commands
     use('tpope/vim-repeat')
@@ -122,4 +125,5 @@ return require('packer').startup(function(use)
             require('cloak').setup()
         end
     }
+    use {'wakatime/vim-wakatime'}
 end)
