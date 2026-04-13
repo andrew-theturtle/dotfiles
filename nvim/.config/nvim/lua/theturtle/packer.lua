@@ -125,5 +125,4 @@ return require('packer').startup(function(use)
             require('cloak').setup()
         end
     }
-    use {'wakatime/vim-wakatime'}
 end)
