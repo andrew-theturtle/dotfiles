@@ -161,7 +161,5 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 eval "$(atuin init zsh)"
 
-. "$HOME/.atuin/bin/env"
 
-eval "$(atuin init zsh)"
 
