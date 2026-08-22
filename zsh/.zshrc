@@ -1,3 +1,7 @@
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
@@ -150,12 +154,12 @@ add_to_path_if_exists "$HOME/.script"
 add_to_path_if_exists "$(python3 -m site --user-base)/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andrew'
 
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+eval "$(atuin init zsh)"
 
 . "$HOME/.atuin/bin/env"
 
