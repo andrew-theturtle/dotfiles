@@ -1,14 +1,8 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
+# load a random theme each time oh-my-zsh is loaded, in which case, to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -150,14 +144,10 @@ add_to_path_if_exists "$HOME/.script"
 add_to_path_if_exists "$(python3 -m site --user-base)/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 alias config='/usr/bin/git --git-dir=/Users/andrew/.cfg/ --work-tree=/Users/andrew'
 
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-. "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
 
